@@ -29,4 +29,4 @@ jobs:
           deleteArtifactsNotInTemplate: 'true'
           managedIdentity: 'false'
           operation: 'deploy'
-          parameters: coopcicdws-WorkspaceDefaultStorage_properties_typeProperties_url="https://coopcicdsauat.dfs.core.windows.net"
+          OverrideArmParameters: coopcicdws-WorkspaceDefaultStorage_properties_typeProperties_url="https://coopcicdsauat.dfs.core.windows.net"
