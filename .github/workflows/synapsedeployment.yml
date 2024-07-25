@@ -29,4 +29,4 @@ jobs:
           deleteArtifactsNotInTemplate: 'true'
           managedIdentity: 'false'
           operation: 'deploy'
-          OverrideArmParameters: AzureKeyVault1_properties_typeProperties_baseUrl="https://gwclient-dev-keyvault.vault.azure.net/"
+          OverrideArmParameters: AzureKeyVault1_properties_typeProperties_baseUrl='https://gwclient-dev-keyvault.vault.azure.net/'
