@@ -1,0 +1,2 @@
+# ./parameters/production/parameters.yaml
+AzureKeyVault1_properties_typeProperties_baseUrl: https://gwclient-dev-keyvault.vault.azure.net/
