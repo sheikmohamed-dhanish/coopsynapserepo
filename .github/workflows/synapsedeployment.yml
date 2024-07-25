@@ -18,8 +18,8 @@ jobs:
       - uses: azure/synapse-workspace-deployment@V1.9.0
         with:
           targetWorkspaceName: 'coopcicdwsuat'
-          templateFile: './coopcicdwsuat/TemplateForWorkspace.json'
-          parametersFile: './coopcicdwsuat/TemplateParametersForWorkspace.json'
+          templateFile: './coopcicdws/TemplateForWorkspace.json'
+          parametersFile: './coopcicdws/TemplateParametersForWorkspace.json'
           environment: 'Azure Public'
           resourceGroup: 'DV-VK-Coop-RG_Target'
           clientId: ${{ secrets.CLIENT_ID }}
