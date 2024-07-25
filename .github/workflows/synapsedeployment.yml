@@ -27,6 +27,6 @@ jobs:
           subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
           tenantId: ${{ secrets.TENANT_ID }}
           deleteArtifactsNotInTemplate: 'true'
-          managedIdentity: 'true'
+          managedIdentity: 'false'
           operation: 'deploy'
           OverrideArmParameters: './coopcicdws/parameters.yml'
