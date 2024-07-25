@@ -1,0 +1,31 @@
+name: "Workspace Deployment"
+
+on:
+  push:
+    branches: [ workspace_publish ]
+
+permissions:
+  id-token: write
+  contents: read
+        
+jobs:
+  release-development:
+    name: "Synapse Workspace Deployment"
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - uses: actions/checkout@v3
+      - uses: azure/synapse-workspace-deployment@V1.9.0
+        with:
+          targetWorkspaceName: 'coopcicdwsuat'
+          templateFile: './coopcicdwsuat/TemplateForWorkspace.json'
+          parametersFile: './coopcicdwsuat/TemplateParametersForWorkspace.json'
+          environment: 'Azure Public'
+          resourceGroup: 'DV-VK-Coop-RG_Target'
+          clientId: ${{ secrets.CLIENT_ID }}
+          clientSecret: ${{ secrets.CLIENT_SECRET }}
+          subscriptionId: ${{ secrets.SUBSCRIPTION_ID }}
+          tenantId: ${{ secrets.TENANT_ID }}
+          deleteArtifactsNotInTemplate: 'true'
+          managedIdentity: 'false'
+          operation: 'deploy'
