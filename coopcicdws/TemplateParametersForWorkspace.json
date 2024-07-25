@@ -10,6 +10,9 @@
 		},
 		"coopcicdws-WorkspaceDefaultStorage_properties_typeProperties_url": {
 			"value": "https://coopcicdsa.dfs.core.windows.net"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://coopcicdkv.vault.azure.net/"
 		}
 	}
 }
